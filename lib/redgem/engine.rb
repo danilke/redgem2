@@ -15,7 +15,7 @@ module Redgem
 			 match 'timesheet/reset', :controller => 'timesheet', :action => 'reset', :conditions => { :method => :delete }
 		    end
 		end
-		I18nCountryTranslations::Railtie.instance_eval do
+		Regdem::Engine.instance_eval do
         pattern = pattern_from app.config.i18n.available_locales
 
         add("rails/locale/#{pattern}.yml")
